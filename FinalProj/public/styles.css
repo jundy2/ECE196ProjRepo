@@ -1,0 +1,265 @@
+/* styles.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes dropdown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /*background-repeat: no-repeat;*/
+    margin: 0px;
+    background: linear-gradient(to right, #91d6ef, #4dc3ef);
+}
+
+/* Header styles */
+.header {
+    position: relative;
+    background-image: url(RackWatch_eyes_bg_bike.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+.header.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+.main_text {
+    font-family: sans-serif;
+    flex-grow: 1;
+    font-size: 4em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+}
+
+
+
+
+
+/* Navigation Bar */
+.navbar ul {
+    list-style-type: none;
+    background-color:#191970;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover {
+    background-color:#101047;
+}
+.navbar li {
+    float: left;
+}
+
+
+
+
+
+/* Table title */
+.title-container {
+    width: 100%;
+    text-align: center;
+}
+.table-title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 40px;
+    font-style: italic;
+    font-weight: bold;
+    background-color: white;
+    border: 5px solid #191970;
+    border-radius: 8px;
+    padding: 10px;
+    display: inline-block;
+}
+
+
+
+
+/* Data table */
+.table-container {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 10px;   /* adjust margin between table and table title*/
+    padding-bottom: 50px;
+    z-index: 1;
+}
+.data-table {
+    border-collapse: collapse;
+    margin:0 auto;
+    font-size: 1.1em;
+    width: 90%;
+    min-width: 800px;
+    border-radius: 9px 9px 9px 9px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+.data-table thead tr {
+    background-color:#191970;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    padding: 12px 15px;
+}
+.data-table th {
+    padding: 17px 20px;
+}
+.data-table td {
+    padding: 17px 20px;
+}
+.data-table tbody tr {
+    height: 50px;
+    border-bottom: 1px solid #dddddd;
+}
+.data-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.data-table tbody tr:nth-of-type(odd) {
+    background-color: white;
+}
+/*.data-table tbody tr:last-of-type {
+    border-bottom: 2px solid #191970;
+}*/
+
+
+
+
+
+#myPlot{
+    width: 599px;
+    height: 299px;
+    z-index: 2;
+}
+.plot-container {
+    position: absolute;
+    z-index: 1000;
+    width: 601px;
+    height: 301px;
+    background-color: black;
+    border: 2px solid black;
+    z-index: 2;
+}
+#timeStolenPlot {
+    width: 899px;
+    height: 399px;
+}
+.plot-container2 {
+    z-index: 1;
+    width: 905px;
+    height: 405px;
+    border: 7px solid #191970;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color: #191970;
+    margin-top: 20px;
+}
+#locationsStolenPlot {
+    width: 899px;
+    height: 399px;
+    padding-bottom: 30px;
+}
+.plot-container3 {
+    width: 905px;
+    height: 405px;
+    border: 7px solid #191970;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color: #191970;
+}
+
+
+
+
+/* Plot title for Time vs Thefts */ 
+.title-container2 {
+    width: 100%;
+    text-align: center;
+}
+.timestolen-title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+    background-color: white;
+    border: 5px solid #191970;
+    border-radius: 8px;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Plot title for Location vs Thefts */ 
+.title-container3 {
+    width: 100%;
+    text-align: center;
+}
+.locationstolen-title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+    background-color: white;
+    border: 5px solid #191970;
+    border-radius: 8px;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* Info button */
+.description-textbox {
+    background-color: white;
+    border: 1px solid black; /* Add a border around the textbox */
+    border-radius: 8px; /* Round the edges */
+    padding: 10px; /* Add padding to create space between the text and the border */
+    display: inline-block; /* Make the textbox expand around the text */
+}
+  
+
+
+
+
+/* about page */
+.about-header {
+    margin-left:20px;
+}

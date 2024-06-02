@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RackWatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="RackWatchLogo_rounded2.png" type="image/png">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="main_text"></h1>
+    </div>
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="/main">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="https://sites.google.com/ucsd.edu/preventingbiketheft/home?authuser=1" target="_blank">Team Website</a></li>
+        </ul>
+    </nav>
+
+    <div class="title-container">
+        <h2 class="table-title">Bike Rack Risk Monitor</h2>
+    </div>
+
+    <div class = "table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Population Level <button class="description-btn" data-description="The current population level for people surrounding this bike rack">?</button></th>
+                    <th>Thefts Over Past 3 Months <button class="description-btn" data-description="The total number of thefts that happened over the past 3 months, at this location.">?</button></th>
+                    <th>Projected Crime Rate of Area <button class="description-btn" data-description="The projected crime rate based on the current time of day and past collected data.">?</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="location-cell" data-location="Geisel Library">Geisel Library</td>
+                    <td>Loading...</td>
+                    <td>Loading...</td>
+                    <td>Loading...</td>
+                </tr>
+                <tr>
+                    <td class="location-cell" data-location="Trolly Station">Trolly Station</td>
+                    <td>Medium</td>
+                    <td>8</td>
+                    <td>High</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- <div id="plotContainer" style="display:none;"></div> -->
+
+    <!-- containter for plot-->
+    <div id="plotContainer" class="plot-container" style="display:none;"> 
+        <div id="myPlot"></div>
+    </div>
+
+    <div class="title-container2">
+        <h2 class="timestolen-title">Time vs Number of Thefts Over the Past 3 Months</h2>
+    </div>
+
+    <!-- container for TimeStolen plot-->
+    <div class="plot-container2">
+        <div id="timeStolenPlot"></div>
+    </div>
+    
+    <div class="title-container3">
+        <h2 class="locationstolen-title">Location vs Number of Thefts Over the Past 3 Months</h2>
+    </div>
+
+    <!-- container for LocationStolen plot-->
+    <div class="plot-container3">
+        <div id="locationsStolenPlot"></div>
+    </div>
+
+    <div id="risk_id"></div>
+    
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="buttons.js"></script>
+    <script src="plots.js"></script>
+    <script src="timestolen.js"></script>
+    <script src="locationsstolen.js"></script>
+    <script src="updateTable.js"></script>
+    <script src="updateThefts.js"></script>
+    <script src="updateCrimeRate.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('.header').classList.add('show');
+        })
+    </script>
+</body>
