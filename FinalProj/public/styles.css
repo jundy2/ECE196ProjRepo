@@ -267,15 +267,15 @@ body {
 
 /* Responsive styles */
 @media only screen and (max-width: 600px) {
-    .plot-container{ 
-        width:75%; 
+    .plot-container,.plot-container2,.plot-container3{ 
+        width:90%;
+        height:50%;
+        overflow-x:auto; 
+        overflow-y: auto;
+     
     } 
-    .plot-container2{ 
-        width:75%; 
-    } 
-    .plot-container3{ 
-        width:75%; 
-    } 
+   
+    
     .data-table,.table-container,.data-table thead tr,.data-table th, .data-table td,.data-table tbody tr{ 
      
         font-size: 12px; 
@@ -290,20 +290,6 @@ body {
     
     
     
-    .location-cell{ 
-        width:50%; 
-        text-align: center;
-    } 
-    #locationsStolenPlot{ 
-        width: 100%; 
-        text-align:center;
-    }
-    #timeStolenPlot{ 
-        width: 100%; 
-        text-align:center;
-    } 
-    #myPlot{ 
-        width: 100%; 
-        text-align:center;
-    }
+   
+    
 }
