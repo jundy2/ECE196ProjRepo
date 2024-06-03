@@ -263,3 +263,47 @@ body {
 .about-header {
     margin-left:20px;
 }
+
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .plot-container{ 
+        width:75%; 
+    } 
+    .plot-container2{ 
+        width:75%; 
+    } 
+    .plot-container3{ 
+        width:75%; 
+    } 
+    .data-table,.table-container,.data-table thead tr,.data-table th, .data-table td,.data-table tbody tr{ 
+     
+        font-size: 12px; 
+        position:relative;
+        text-align: center;
+        margin:auto; /* Center the table */
+        table-layout: auto;
+        white-space: nowrap; /* Prevent text wrapping */
+        border: 1px solid #ddd; /* Thin border */ 
+        overflow-x:auto;
+    } 
+    
+    
+    
+    .location-cell{ 
+        width:50%; 
+        text-align: center;
+    } 
+    #locationsStolenPlot{ 
+        width: 100%; 
+        text-align:center;
+    }
+    #timeStolenPlot{ 
+        width: 100%; 
+        text-align:center;
+    } 
+    #myPlot{ 
+        width: 100%; 
+        text-align:center;
+    }
+}
